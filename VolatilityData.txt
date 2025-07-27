@@ -1,0 +1,902 @@
+
+
+ubuntu@tryhackme:~/Desktop/Artefacts$ vol -f WKSTN-2961.raw windows.info.Info
+Volatility 3 Framework 2.5.0
+Progress:  100.00		PDB scanning finished                        
+Variable	Value
+
+Kernel Base	0xf8025321a000
+DTB	0x1aa000
+Symbols	file:///usr/local/lib/python3.8/dist-packages/volatility3-2.5.0-py3.8.egg/volatility3/symbols/windows/ntkrnlmp.pdb/E0093F3AEF15D58168B753C9488A4043-1.json.xz
+Is64Bit	True
+IsPAE	False
+layer_name	0 WindowsIntel32e
+memory_layer	1 FileLayer
+KdVersionBlock	0xf802536443c8
+Major/Minor	15.18362
+MachineType	34404
+KeNumberProcessors	2
+SystemTime	2023-08-21 14:14:28
+NtSystemRoot	C:\Windows
+NtProductType	NtProductWinNt
+NtMajorVersion	10
+NtMinorVersion	0
+PE MajorOperatingSystemVersion	10
+PE MinorOperatingSystemVersion	0
+PE Machine	34404
+PE TimeDateStamp	Mon Apr 14 21:36:50 2104
+ubuntu@tryhackme:~/Desktop/Artefacts$ 
+
+
+
+ubuntu@tryhackme:~/Desktop/Artefacts$ vol -f WKSTN-2961.raw  windows.pslist.PsList
+Volatility 3 Framework 2.5.0
+Progress:  100.00		PDB scanning finished                        
+PID	PPID	ImageFileName	Offset(V)	Threads	Handles	SessionId	Wow64	CreateTime	ExitTime	File output
+
+4	0	System	0xe58f7e675080	168	-	N/A	False	2023-08-21 13:45:50.000000 	N/A	Disabled
+84	4	Registry	0xe58f7e765040	4	-	N/A	False	2023-08-21 13:45:34.000000 	N/A	Disabled
+340	4	smss.exe	0xe58f81466040	2	-	N/A	False	2023-08-21 13:45:50.000000 	N/A	Disabled
+436	424	csrss.exe	0xe58f8399d080	10	-	0	False	2023-08-21 13:46:27.000000 	N/A	Disabled
+508	424	wininit.exe	0xe58f83ae1080	1	-	0	False	2023-08-21 13:46:27.000000 	N/A	Disabled
+524	500	csrss.exe	0xe58f83ae0080	10	-	1	False	2023-08-21 13:46:27.000000 	N/A	Disabled
+576	500	winlogon.exe	0xe58f83b18080	2	-	1	False	2023-08-21 13:46:27.000000 	N/A	Disabled
+644	508	services.exe	0xe58f82970080	5	-	0	False	2023-08-21 13:46:30.000000 	N/A	Disabled
+660	508	lsass.exe	0xe58f83b89080	8	-	0	False	2023-08-21 13:46:30.000000 	N/A	Disabled
+740	508	fontdrvhost.ex	0xe58f83bb5080	5	-	0	False	2023-08-21 13:46:36.000000 	N/A	Disabled
+772	576	fontdrvhost.ex	0xe58f83bbd180	5	-	1	False	2023-08-21 13:46:36.000000 	N/A	Disabled
+828	644	svchost.exe	0xe58f84804240	13	-	0	False	2023-08-21 13:46:37.000000 	N/A	Disabled
+876	644	svchost.exe	0xe58f84821080	9	-	0	False	2023-08-21 13:46:40.000000 	N/A	Disabled
+956	576	dwm.exe	0xe58f848f0080	13	-	1	False	2023-08-21 13:46:44.000000 	N/A	Disabled
+388	644	svchost.exe	0xe58f849712c0	32	-	0	False	2023-08-21 13:46:45.000000 	N/A	Disabled
+420	644	svchost.exe	0xe58f84972080	45	-	0	False	2023-08-21 13:46:45.000000 	N/A	Disabled
+892	644	svchost.exe	0xe58f849a6240	16	-	0	False	2023-08-21 13:46:45.000000 	N/A	Disabled
+1040	644	svchost.exe	0xe58f849eb2c0	15	-	0	False	2023-08-21 13:46:46.000000 	N/A	Disabled
+1048	644	svchost.exe	0xe58f849ec2c0	23	-	0	False	2023-08-21 13:46:46.000000 	N/A	Disabled
+1056	644	svchost.exe	0xe58f849f02c0	17	-	0	False	2023-08-21 13:46:46.000000 	N/A	Disabled
+1064	644	svchost.exe	0xe58f849f22c0	3	-	0	False	2023-08-21 13:46:46.000000 	N/A	Disabled
+1140	644	svchost.exe	0xe58f849ac080	18	-	0	False	2023-08-21 13:46:47.000000 	N/A	Disabled
+1472	4	MemCompression	0xe58f84b41040	30	-	N/A	False	2023-08-21 13:46:50.000000 	N/A	Disabled
+1540	644	svchost.exe	0xe58f84a920c0	9	-	0	False	2023-08-21 13:46:50.000000 	N/A	Disabled
+1600	644	svchost.exe	0xe58f84c402c0	11	-	0	False	2023-08-21 13:46:51.000000 	N/A	Disabled
+1656	644	svchost.exe	0xe58f84c55080	3	-	0	False	2023-08-21 13:46:51.000000 	N/A	Disabled
+1680	644	svchost.exe	0xe58f84c0a2c0	4	-	0	False	2023-08-21 13:46:51.000000 	N/A	Disabled
+1836	644	svchost.exe	0xe58f84cd8240	15	-	0	False	2023-08-21 13:46:51.000000 	N/A	Disabled
+1960	644	svchost.exe	0xe58f84c0c080	4	-	0	False	2023-08-21 13:46:51.000000 	N/A	Disabled
+1716	644	spoolsv.exe	0xe58f84da0200	7	-	0	False	2023-08-21 13:46:51.000000 	N/A	Disabled
+2176	644	svchost.exe	0xe58f84df7240	8	-	0	False	2023-08-21 13:46:51.000000 	N/A	Disabled
+2256	644	amazon-ssm-age	0xe58f84e70280	11	-	0	False	2023-08-21 13:46:51.000000 	N/A	Disabled
+2384	644	MsMpEng.exe	0xe58f84ed1340	9	-	0	False	2023-08-21 13:46:52.000000 	N/A	Disabled
+2396	644	Ec2Config.exe	0xe58f84ed2080	21	-	0	False	2023-08-21 13:46:52.000000 	N/A	Disabled
+2408	644	OfficeClickToR	0xe58f84f04340	15	-	0	False	2023-08-21 13:46:52.000000 	N/A	Disabled
+2332	576	LogonUI.exe	0xe58f862f1080	15	-	1	False	2023-08-21 13:46:56.000000 	N/A	Disabled
+3372	2256	ssm-agent-work	0xe58f86460380	11	-	0	False	2023-08-21 13:47:07.000000 	N/A	Disabled
+3380	3372	conhost.exe	0xe58f7e674080	4	-	0	False	2023-08-21 13:47:07.000000 	N/A	Disabled
+4060	644	svchost.exe	0xe58f865a62c0	7	-	0	False	2023-08-21 13:47:14.000000 	N/A	Disabled
+588	644	svchost.exe	0xe58f84a64080	4	-	0	False	2023-08-21 13:48:48.000000 	N/A	Disabled
+1852	644	SgrmBroker.exe	0xe58f86364080	3	-	0	False	2023-08-21 13:49:02.000000 	N/A	Disabled
+1336	644	svchost.exe	0xe58f864ae080	8	-	0	False	2023-08-21 13:49:02.000000 	N/A	Disabled
+3912	644	SearchIndexer.	0xe58f864b90c0	14	-	0	False	2023-08-21 13:49:03.000000 	N/A	Disabled
+448	828	WmiPrvSE.exe	0xe58f863b80c0	3	-	0	False	2023-08-21 13:50:52.000000 	N/A	Disabled
+824	3068	explorer.exe	0xe58f8756b080	0	-	2	False	2023-08-21 13:53:49.000000 	2023-08-21 14:01:08.000000 	Disabled
+4192	644	svchost.exe	0xe58f8762b240	1	-	0	False	2023-08-21 13:53:50.000000 	N/A	Disabled
+1424	644	SecurityHealth	0xe58f87a84080	8	-	0	False	2023-08-21 13:55:59.000000 	N/A	Disabled
+2164	644	svchost.exe	0xe58f865d9080	4	-	0	False	2023-08-21 13:56:46.000000 	N/A	Disabled
+5476	828	SystemSettings	0xe58f86458080	0	-	2	False	2023-08-21 13:56:49.000000 	2023-08-21 13:57:03.000000 	Disabled
+4156	644	svchost.exe	0xe58f810ac080	3	-	0	False	2023-08-21 13:56:51.000000 	N/A	Disabled
+5508	828	SystemSettings	0xe58f874ea0c0	0	-	2	False	2023-08-21 13:58:42.000000 	2023-08-21 13:59:27.000000 	Disabled
+5916	4296	csrss.exe	0xe58f860384c0	11	-	3	False	2023-08-21 14:06:26.000000 	N/A	Disabled
+4320	4296	winlogon.exe	0xe58f87b734c0	4	-	3	False	2023-08-21 14:06:26.000000 	N/A	Disabled
+5480	644	WUDFHost.exe	0xe58f879130c0	10	-	0	False	2023-08-21 14:06:28.000000 	N/A	Disabled
+4580	4320	dwm.exe	0xe58f864bb080	15	-	3	False	2023-08-21 14:06:28.000000 	N/A	Disabled
+4168	4320	fontdrvhost.ex	0xe58f87ca7080	5	-	3	False	2023-08-21 14:06:28.000000 	N/A	Disabled
+1108	644	svchost.exe	0xe58f876c6080	3	-	0	False	2023-08-21 14:06:29.000000 	N/A	Disabled
+7132	388	rdpclip.exe	0xe58f864e6080	11	-	3	False	2023-08-21 14:06:32.000000 	N/A	Disabled
+6300	420	sihost.exe	0xe58f87ade080	9	-	3	False	2023-08-21 14:06:33.000000 	N/A	Disabled
+780	644	svchost.exe	0xe58f8656b480	10	-	3	False	2023-08-21 14:06:33.000000 	N/A	Disabled
+4248	420	taskhostw.exe	0xe58f87604480	8	-	3	False	2023-08-21 14:06:33.000000 	N/A	Disabled
+4008	892	ctfmon.exe	0xe58f81557080	9	-	3	False	2023-08-21 14:06:33.000000 	N/A	Disabled
+3948	4320	userinit.exe	0xe58f87788080	0	-	3	False	2023-08-21 14:06:33.000000 	2023-08-21 14:07:00.000000 	Disabled
+596	3948	explorer.exe	0xe58f87e31080	46	-	3	False	2023-08-21 14:06:34.000000 	N/A	Disabled
+4120	644	svchost.exe	0xe58f84a7b2c0	6	-	3	False	2023-08-21 14:06:34.000000 	N/A	Disabled
+6480	828	StartMenuExper	0xe58f861b5080	8	-	3	False	2023-08-21 14:06:37.000000 	N/A	Disabled
+6724	828	RuntimeBroker.	0xe58f876d8080	2	-	3	False	2023-08-21 14:06:38.000000 	N/A	Disabled
+7120	828	SearchUI.exe	0xe58f87e7e080	32	-	3	False	2023-08-21 14:06:38.000000 	N/A	Disabled
+1096	828	RuntimeBroker.	0xe58f81551080	2	-	3	False	2023-08-21 14:06:39.000000 	N/A	Disabled
+3364	828	RuntimeBroker.	0xe58f87af6080	1	-	3	False	2023-08-21 14:06:42.000000 	N/A	Disabled
+4424	828	smartscreen.ex	0xe58f87898080	5	-	3	False	2023-08-21 14:06:51.000000 	N/A	Disabled
+6132	596	msedge.exe	0xe58f876d7080	0	-	3	False	2023-08-21 14:06:51.000000 	2023-08-21 14:06:56.000000 	Disabled
+5020	828	WindowsInterna	0xe58f87ab90c0	9	-	3	False	2023-08-21 14:07:35.000000 	N/A	Disabled
+3892	1540	audiodg.exe	0xe58f88b60080	4	-	0	False	2023-08-21 14:08:38.000000 	N/A	Disabled
+4784	828	SecurityHealth	0xe58f87edc080	1	-	3	False	2023-08-21 14:08:41.000000 	N/A	Disabled
+1396	828	ShellExperienc	0xe58f84f1e080	13	-	3	False	2023-08-21 14:08:41.000000 	N/A	Disabled
+3304	828	RuntimeBroker.	0xe58f863cb080	4	-	3	False	2023-08-21 14:08:41.000000 	N/A	Disabled
+6932	596	cmd.exe	0xe58f87c230c0	1	-	3	False	2023-08-21 14:09:01.000000 	N/A	Disabled
+6052	6932	conhost.exe	0xe58f87677080	4	-	3	False	2023-08-21 14:09:01.000000 	N/A	Disabled
+1440	596	OUTLOOK.EXE	0xe58f87c8a080	22	-	3	False	2023-08-21 14:09:04.000000 	N/A	Disabled
+1124	1440	WINWORD.EXE	0xe58f81150080	18	-	3	False	2023-08-21 14:12:31.000000 	N/A	Disabled
+6720	3912	SearchFilterHo	0xe58f8114f080	5	-	0	False	2023-08-21 14:12:33.000000 	N/A	Disabled
+4336	1124	WINWORD.EXE	0xe58f87547080	0	-	3	False	2023-08-21 14:12:34.000000 	2023-08-21 14:12:45.000000 	Disabled
+4776	828	WmiPrvSE.exe	0xe58f875020c0	9	-	0	False	2023-08-21 14:12:34.000000 	N/A	Disabled
+6592	3912	SearchProtocol	0xe58f8635f080	0	-	0	False	2023-08-21 14:12:38.000000 	2023-08-21 14:15:07.000000 	Disabled
+4260	1124	wscript.exe	0xe58f864ca0c0	6	-	3	False	2023-08-21 14:12:47.000000 	N/A	Disabled
+6216	4260	updater.exe	0xe58f87ac0080	18	-	3	False	2023-08-21 14:12:48.000000 	N/A	Disabled
+4464	6216	conhost.exe	0xe58f84bd1080	5	-	3	False	2023-08-21 14:14:03.000000 	N/A	Disabled
+6332	6932	DumpIt.exe	0xe58f87a870c0	3	-	3	True	2023-08-21 14:14:25.000000 	N/A	Disabled
+
+ubuntu@tryhackme:~/Desktop/Artefacts$ vol -f WKSTN-2961.raw windows.pstree.PsTree
+Volatility 3 Framework 2.5.0
+Progress:  100.00		PDB scanning finished                        
+PID	PPID	ImageFileName	Offset(V)	Threads	Handles	SessionId	Wow64	CreateTime	ExitTime
+
+4	0	System	0xe58f7e675080	168	-	N/A	False	2023-08-21 13:45:50.000000 	N/A
+* 1472	4	MemCompression	0xe58f84b41040	30	-	N/A	False	2023-08-21 13:46:50.000000 	N/A
+* 84	4	Registry	0xe58f7e765040	4	-	N/A	False	2023-08-21 13:45:34.000000 	N/A
+* 340	4	smss.exe	0xe58f81466040	2	-	N/A	False	2023-08-21 13:45:50.000000 	N/A
+436	424	csrss.exe	0xe58f8399d080	10	-	0	False	2023-08-21 13:46:27.000000 	N/A
+508	424	wininit.exe	0xe58f83ae1080	1	-	0	False	2023-08-21 13:46:27.000000 	N/A
+* 660	508	lsass.exe	0xe58f83b89080	8	-	0	False	2023-08-21 13:46:30.000000 	N/A
+* 644	508	services.exe	0xe58f82970080	5	-	0	False	2023-08-21 13:46:30.000000 	N/A
+** 2176	644	svchost.exe	0xe58f84df7240	8	-	0	False	2023-08-21 13:46:51.000000 	N/A
+** 388	644	svchost.exe	0xe58f849712c0	32	-	0	False	2023-08-21 13:46:45.000000 	N/A
+*** 7132	388	rdpclip.exe	0xe58f864e6080	11	-	3	False	2023-08-21 14:06:32.000000 	N/A
+** 1540	644	svchost.exe	0xe58f84a920c0	9	-	0	False	2023-08-21 13:46:50.000000 	N/A
+*** 3892	1540	audiodg.exe	0xe58f88b60080	4	-	0	False	2023-08-21 14:08:38.000000 	N/A
+** 780	644	svchost.exe	0xe58f8656b480	10	-	3	False	2023-08-21 14:06:33.000000 	N/A
+** 1040	644	svchost.exe	0xe58f849eb2c0	15	-	0	False	2023-08-21 13:46:46.000000 	N/A
+** 1680	644	svchost.exe	0xe58f84c0a2c0	4	-	0	False	2023-08-21 13:46:51.000000 	N/A
+** 1424	644	SecurityHealth	0xe58f87a84080	8	-	0	False	2023-08-21 13:55:59.000000 	N/A
+** 1048	644	svchost.exe	0xe58f849ec2c0	23	-	0	False	2023-08-21 13:46:46.000000 	N/A
+** 4120	644	svchost.exe	0xe58f84a7b2c0	6	-	3	False	2023-08-21 14:06:34.000000 	N/A
+** 1056	644	svchost.exe	0xe58f849f02c0	17	-	0	False	2023-08-21 13:46:46.000000 	N/A
+** 420	644	svchost.exe	0xe58f84972080	45	-	0	False	2023-08-21 13:46:45.000000 	N/A
+*** 4248	420	taskhostw.exe	0xe58f87604480	8	-	3	False	2023-08-21 14:06:33.000000 	N/A
+*** 6300	420	sihost.exe	0xe58f87ade080	9	-	3	False	2023-08-21 14:06:33.000000 	N/A
+** 1064	644	svchost.exe	0xe58f849f22c0	3	-	0	False	2023-08-21 13:46:46.000000 	N/A
+** 1960	644	svchost.exe	0xe58f84c0c080	4	-	0	False	2023-08-21 13:46:51.000000 	N/A
+** 1836	644	svchost.exe	0xe58f84cd8240	15	-	0	False	2023-08-21 13:46:51.000000 	N/A
+** 1716	644	spoolsv.exe	0xe58f84da0200	7	-	0	False	2023-08-21 13:46:51.000000 	N/A
+** 1336	644	svchost.exe	0xe58f864ae080	8	-	0	False	2023-08-21 13:49:02.000000 	N/A
+** 828	644	svchost.exe	0xe58f84804240	13	-	0	False	2023-08-21 13:46:37.000000 	N/A
+*** 448	828	WmiPrvSE.exe	0xe58f863b80c0	3	-	0	False	2023-08-21 13:50:52.000000 	N/A
+*** 5508	828	SystemSettings	0xe58f874ea0c0	0	-	2	False	2023-08-21 13:58:42.000000 	2023-08-21 13:59:27.000000 
+*** 5476	828	SystemSettings	0xe58f86458080	0	-	2	False	2023-08-21 13:56:49.000000 	2023-08-21 13:57:03.000000 
+*** 6724	828	RuntimeBroker.	0xe58f876d8080	2	-	3	False	2023-08-21 14:06:38.000000 	N/A
+*** 3364	828	RuntimeBroker.	0xe58f87af6080	1	-	3	False	2023-08-21 14:06:42.000000 	N/A
+*** 1096	828	RuntimeBroker.	0xe58f81551080	2	-	3	False	2023-08-21 14:06:39.000000 	N/A
+*** 4424	828	smartscreen.ex	0xe58f87898080	5	-	3	False	2023-08-21 14:06:51.000000 	N/A
+*** 3304	828	RuntimeBroker.	0xe58f863cb080	4	-	3	False	2023-08-21 14:08:41.000000 	N/A
+*** 4776	828	WmiPrvSE.exe	0xe58f875020c0	9	-	0	False	2023-08-21 14:12:34.000000 	N/A
+*** 6480	828	StartMenuExper	0xe58f861b5080	8	-	3	False	2023-08-21 14:06:37.000000 	N/A
+*** 7120	828	SearchUI.exe	0xe58f87e7e080	32	-	3	False	2023-08-21 14:06:38.000000 	N/A
+*** 4784	828	SecurityHealth	0xe58f87edc080	1	-	3	False	2023-08-21 14:08:41.000000 	N/A
+*** 1396	828	ShellExperienc	0xe58f84f1e080	13	-	3	False	2023-08-21 14:08:41.000000 	N/A
+*** 5020	828	WindowsInterna	0xe58f87ab90c0	9	-	3	False	2023-08-21 14:07:35.000000 	N/A
+** 1852	644	SgrmBroker.exe	0xe58f86364080	3	-	0	False	2023-08-21 13:49:02.000000 	N/A
+** 4156	644	svchost.exe	0xe58f810ac080	3	-	0	False	2023-08-21 13:56:51.000000 	N/A
+** 1600	644	svchost.exe	0xe58f84c402c0	11	-	0	False	2023-08-21 13:46:51.000000 	N/A
+** 3912	644	SearchIndexer.	0xe58f864b90c0	14	-	0	False	2023-08-21 13:49:03.000000 	N/A
+*** 6720	3912	SearchFilterHo	0xe58f8114f080	5	-	0	False	2023-08-21 14:12:33.000000 	N/A
+*** 6592	3912	SearchProtocol	0xe58f8635f080	0	-	0	False	2023-08-21 14:12:38.000000 	2023-08-21 14:15:07.000000 
+** 588	644	svchost.exe	0xe58f84a64080	4	-	0	False	2023-08-21 13:48:48.000000 	N/A
+** 2256	644	amazon-ssm-age	0xe58f84e70280	11	-	0	False	2023-08-21 13:46:51.000000 	N/A
+*** 3372	2256	ssm-agent-work	0xe58f86460380	11	-	0	False	2023-08-21 13:47:07.000000 	N/A
+**** 3380	3372	conhost.exe	0xe58f7e674080	4	-	0	False	2023-08-21 13:47:07.000000 	N/A
+** 2384	644	MsMpEng.exe	0xe58f84ed1340	9	-	0	False	2023-08-21 13:46:52.000000 	N/A
+** 1108	644	svchost.exe	0xe58f876c6080	3	-	0	False	2023-08-21 14:06:29.000000 	N/A
+** 2396	644	Ec2Config.exe	0xe58f84ed2080	21	-	0	False	2023-08-21 13:46:52.000000 	N/A
+** 4060	644	svchost.exe	0xe58f865a62c0	7	-	0	False	2023-08-21 13:47:14.000000 	N/A
+** 4192	644	svchost.exe	0xe58f8762b240	1	-	0	False	2023-08-21 13:53:50.000000 	N/A
+** 2408	644	OfficeClickToR	0xe58f84f04340	15	-	0	False	2023-08-21 13:46:52.000000 	N/A
+** 5480	644	WUDFHost.exe	0xe58f879130c0	10	-	0	False	2023-08-21 14:06:28.000000 	N/A
+** 876	644	svchost.exe	0xe58f84821080	9	-	0	False	2023-08-21 13:46:40.000000 	N/A
+** 1140	644	svchost.exe	0xe58f849ac080	18	-	0	False	2023-08-21 13:46:47.000000 	N/A
+** 2164	644	svchost.exe	0xe58f865d9080	4	-	0	False	2023-08-21 13:56:46.000000 	N/A
+** 1656	644	svchost.exe	0xe58f84c55080	3	-	0	False	2023-08-21 13:46:51.000000 	N/A
+** 892	644	svchost.exe	0xe58f849a6240	16	-	0	False	2023-08-21 13:46:45.000000 	N/A
+*** 4008	892	ctfmon.exe	0xe58f81557080	9	-	3	False	2023-08-21 14:06:33.000000 	N/A
+* 740	508	fontdrvhost.ex	0xe58f83bb5080	5	-	0	False	2023-08-21 13:46:36.000000 	N/A
+524	500	csrss.exe	0xe58f83ae0080	10	-	1	False	2023-08-21 13:46:27.000000 	N/A
+576	500	winlogon.exe	0xe58f83b18080	2	-	1	False	2023-08-21 13:46:27.000000 	N/A
+* 956	576	dwm.exe	0xe58f848f0080	13	-	1	False	2023-08-21 13:46:44.000000 	N/A
+* 772	576	fontdrvhost.ex	0xe58f83bbd180	5	-	1	False	2023-08-21 13:46:36.000000 	N/A
+* 2332	576	LogonUI.exe	0xe58f862f1080	15	-	1	False	2023-08-21 13:46:56.000000 	N/A
+824	3068	explorer.exe	0xe58f8756b080	0	-	2	False	2023-08-21 13:53:49.000000 	2023-08-21 14:01:08.000000 
+5916	4296	csrss.exe	0xe58f860384c0	11	-	3	False	2023-08-21 14:06:26.000000 	N/A
+4320	4296	winlogon.exe	0xe58f87b734c0	4	-	3	False	2023-08-21 14:06:26.000000 	N/A
+* 4168	4320	fontdrvhost.ex	0xe58f87ca7080	5	-	3	False	2023-08-21 14:06:28.000000 	N/A
+* 4580	4320	dwm.exe	0xe58f864bb080	15	-	3	False	2023-08-21 14:06:28.000000 	N/A
+* 3948	4320	userinit.exe	0xe58f87788080	0	-	3	False	2023-08-21 14:06:33.000000 	2023-08-21 14:07:00.000000 
+** 596	3948	explorer.exe	0xe58f87e31080	46	-	3	False	2023-08-21 14:06:34.000000 	N/A
+*** 1440	596	OUTLOOK.EXE	0xe58f87c8a080	22	-	3	False	2023-08-21 14:09:04.000000 	N/A
+**** 1124	1440	WINWORD.EXE	0xe58f81150080	18	-	3	False	2023-08-21 14:12:31.000000 	N/A
+***** 4336	1124	WINWORD.EXE	0xe58f87547080	0	-	3	False	2023-08-21 14:12:34.000000 	2023-08-21 14:12:45.000000 
+***** 4260	1124	wscript.exe	0xe58f864ca0c0	6	-	3	False	2023-08-21 14:12:47.000000 	N/A
+****** 6216	4260	updater.exe	0xe58f87ac0080	18	-	3	False	2023-08-21 14:12:48.000000 	N/A
+******* 4464	6216	conhost.exe	0xe58f84bd1080	5	-	3	False	2023-08-21 14:14:03.000000 	N/A
+*** 6132	596	msedge.exe	0xe58f876d7080	0	-	3	False	2023-08-21 14:06:51.000000 	2023-08-21 14:06:56.000000 
+*** 6932	596	cmd.exe	0xe58f87c230c0	1	-	3	False	2023-08-21 14:09:01.000000 	N/A
+**** 6332	6932	DumpIt.exe	0xe58f87a870c0	3	-	3	True	2023-08-21 14:14:25.000000 	N/A
+**** 6052	6932	conhost.exe	0xe58f87677080	4	-	3	False	2023-08-21 14:09:01.000000 	N/A
+
+ubuntu@tryhackme:~/Desktop/Artefacts$ vol -f WKSTN-2961.raw windows.cmdline.CmdLin
+Volatility 3 Framework 2.5.0
+Progress:  100.00		PDB scanning finished                        
+PID	Process	Args
+
+4	System	Required memory at 0x20 is inaccessible (swapped)
+84	Registry	Required memory at 0x20 is not valid (process exited?)
+340	smss.exe	Required memory at 0x309f35b020 is not valid (process exited?)
+436	csrss.exe	Required memory at 0x1a8e3e5020 is inaccessible (swapped)
+508	wininit.exe	Required memory at 0x8827780020 is inaccessible (swapped)
+524	csrss.exe	Required memory at 0x21969c02dc8 is inaccessible (swapped)
+576	winlogon.exe	Required memory at 0x703944c020 is not valid (process exited?)
+644	services.exe	C:\Windows\system32\services.exe
+660	lsass.exe	C:\Windows\system32\lsass.exe
+740	fontdrvhost.ex	Required memory at 0xe5852df020 is inaccessible (swapped)
+772	fontdrvhost.ex	Process 772: Required memory at 0x1fa1d9756020 is not valid (incomplete layer memory_layer?)
+828	svchost.exe	C:\Windows\system32\svchost.exe -k DcomLaunch -p
+876	svchost.exe	C:\Windows\system32\svchost.exe -k RPCSS -p
+956	dwm.exe	Required memory at 0x187626318f8 is inaccessible (swapped)
+388	svchost.exe	C:\Windows\System32\svchost.exe -k NetworkService
+420	svchost.exe	C:\Windows\system32\svchost.exe -k netsvcs -p
+892	svchost.exe	Required memory at 0x2412b4032f8 is inaccessible (swapped)
+1040	svchost.exe	C:\Windows\system32\svchost.exe -k LocalServiceNoNetwork -p
+1048	svchost.exe	C:\Windows\system32\svchost.exe -k LocalService -p
+1056	svchost.exe	C:\Windows\System32\svchost.exe -k LocalServiceNetworkRestricted -p
+1064	svchost.exe	Required memory at 0x5cf0005940 is not valid (process exited?)
+1140	svchost.exe	C:\Windows\system32\svchost.exe -k NetworkService -p
+1472	MemCompression	Required memory at 0x20 is not valid (process exited?)
+1540	svchost.exe	C:\Windows\System32\svchost.exe -k LocalServiceNetworkRestricted -p
+1600	svchost.exe	C:\Windows\system32\svchost.exe -k LocalServiceNoNetworkFirewall -p
+1656	svchost.exe	Required memory at 0xe8f4108020 is inaccessible (swapped)
+1680	svchost.exe	Required memory at 0xab042ab020 is inaccessible (swapped)
+1836	svchost.exe	C:\Windows\system32\svchost.exe -k netsvcs
+1960	svchost.exe	C:\Windows\system32\svchost.exe -k NetworkServiceNetworkRestricted -p
+1716	spoolsv.exe	Required memory at 0xbf9020 is inaccessible (swapped)
+2176	svchost.exe	Required memory at 0xc7e487e020 is inaccessible (swapped)
+2256	amazon-ssm-age	Required memory at 0x12617b5210a is inaccessible (swapped)
+2384	MsMpEng.exe	"C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.23070.1004-0\MsMpEng.exe"
+2396	Ec2Config.exe	"C:\Program Files\Amazon\Ec2ConfigService\Ec2Config.exe"
+2408	OfficeClickToR	"C:\Program Files\Common Files\Microsoft Shared\ClickToRun\OfficeClickToRun.exe" /service
+2332	LogonUI.exe	"LogonUI.exe" /flags:0x2 /state0:0xa38a6055 /state1:0x41c64e6d
+3372	ssm-agent-work	Required memory at 0x24605a9210a is inaccessible (swapped)
+3380	conhost.exe	Required memory at 0x21154f21ad8 is inaccessible (swapped)
+4060	svchost.exe	Required memory at 0xc0c000c0c84 is not valid (process exited?)
+588	svchost.exe	C:\Windows\system32\svchost.exe -k appmodel -p
+1852	SgrmBroker.exe	Required memory at 0x78 is not valid (process exited?)
+1336	svchost.exe	C:\Windows\System32\svchost.exe -k LocalServiceNetworkRestricted -p
+3912	SearchIndexer.	C:\Windows\system32\SearchIndexer.exe /Embedding
+448	WmiPrvSE.exe	Required memory at 0x1ae787c20f4 is inaccessible (swapped)
+824	explorer.exe	Required memory at 0xe37020 is not valid (process exited?)
+4192	svchost.exe	Required memory at 0x2431036d638 is not valid (process exited?)
+1424	SecurityHealth	C:\Windows\system32\SecurityHealthService.exe
+2164	svchost.exe	Required memory at 0x121119d020 is not valid (process exited?)
+5476	SystemSettings	Required memory at 0xfe82a36020 is not valid (process exited?)
+4156	svchost.exe	Required memory at 0x316cce2020 is inaccessible (swapped)
+5508	SystemSettings	Required memory at 0xb888286020 is not valid (process exited?)
+5916	csrss.exe	Required memory at 0x1a789a02dc8 is inaccessible (swapped)
+4320	winlogon.exe	Required memory at 0x85b7d08020 is inaccessible (swapped)
+5480	WUDFHost.exe	Required memory at 0x227837618f8 is inaccessible (swapped)
+4580	dwm.exe	"dwm.exe"
+4168	fontdrvhost.ex	Required memory at 0x19b73e51a58 is inaccessible (swapped)
+1108	svchost.exe	Required memory at 0x1ae7300020 is inaccessible (swapped)
+7132	rdpclip.exe	㡐ဵɃ
+6300	sihost.exe	sihost.exe
+780	svchost.exe	C:\Windows\system32\svchost.exe -k UnistackSvcGroup
+4248	taskhostw.exe	taskhostw.exe {222A245B-E637-4AE9-A93F-A59CA119A75E}
+4008	ctfmon.exe	
+3948	userinit.exe	Required memory at 0x62fcfca020 is not valid (process exited?)
+596	explorer.exe	C:\Windows\Explorer.EXE
+4120	svchost.exe	C:\Windows\system32\svchost.exe -k ClipboardSvcGroup -p
+6480	StartMenuExper	"C:\Windows\SystemApps\Microsoft.Windows.StartMenuExperienceHost_cw5n1h2txyewy\StartMenuExperienceHost.exe" -ServerName:App.AppXywbrabmsek0gm3tkwpr5kwzbs55tkqay.mca
+6724	RuntimeBroker.	C:\Windows\System32\RuntimeBroker.exe -Embedding
+7120	SearchUI.exe	"C:\Windows\SystemApps\Microsoft.Windows.Cortana_cw5n1h2txyewy\SearchUI.exe" -ServerName:CortanaUI.AppXa50dqqa5gqv4a428c9y1jjw7m3btvepj.mca
+1096	RuntimeBroker.	Required memory at 0x78 is not valid (process exited?)
+3364	RuntimeBroker.	Required memory at 0x78 is not valid (process exited?)
+4424	smartscreen.ex	Required memory at 0x7e4d414e05b3 is not valid (process exited?)
+6132	msedge.exe	Required memory at 0x356bdb020 is not valid (process exited?)
+5020	WindowsInterna	"C:\Windows\SystemApps\InputApp_cw5n1h2txyewy\WindowsInternal.ComposableShell.Experiences.TextInput.InputApp.exe" -ServerName:App.AppXagta193n5rpf7mheremt3yyfa1g555vc.mca
+3892	audiodg.exe	Required memory at 0x25a93e61b58 is not valid (process exited?)
+4784	SecurityHealth	C:\Windows\System32\SecurityHealthHost.exe {08728914-3F57-4D52-9E31-49DAECA5A80A} -Embedding
+1396	ShellExperienc	"C:\Windows\SystemApps\ShellExperienceHost_cw5n1h2txyewy\ShellExperienceHost.exe" -ServerName:App.AppXtk181tbxbce2qsex02s8tw7hfxa9xb3t.mca
+3304	RuntimeBroker.	Required memory at 0x4600530078 is not valid (process exited?)
+6932	cmd.exe	
+6052	conhost.exe	Required memory at 0x283529b1ae8 is inaccessible (swapped)
+1440	OUTLOOK.EXE	"C:\Program Files\Microsoft Office\Root\Office16\OUTLOOK.EXE" /eml "C:\Users\maxine.beck\Desktop\Resume - Application for Junior IT Analyst Role.eml"
+1124	WINWORD.EXE	"C:\Program Files\Microsoft Office\Root\Office16\WINWORD.EXE" /n "C:\Users\maxine.beck\AppData\Local\Microsoft\Windows\INetCache\Content.Outlook\WQHGZCFI\Resume_WesleyTaylor (002).doc
+6720	SearchFilterHo	Process 6720: Required memory at 0x700000000 is not valid (incomplete layer memory_layer?)
+4336	WINWORD.EXE	Required memory at 0x6e60370020 is not valid (process exited?)
+4776	WmiPrvSE.exe	C:\Windows\system32\wbem\wmiprvse.exe
+6592	SearchProtocol	Process 6592: Required memory at 0x1582ef2ce000 is not valid (incomplete layer memory_layer?)
+4260	wscript.exe	wscript.exe C:\ProgramData\update.js
+6216	updater.exe	"C:\Windows\Tasks\updater.exe" 
+4464	conhost.exe	\??\C:\Windows\system32\conhost.exe 0x4
+6332	DumpIt.exe	.\DumpIt.exe
+
+ubuntu@tryhackme:~/Desktop/Artefacts$ vol -f WKSTN-2961.raw windows.pslist.PsList
+Volatility 3 Framework 2.5.0
+Progress:  100.00		PDB scanning finished                        
+PID	PPID	ImageFileName	Offset(V)	Threads	Handles	SessionId	Wow64	CreateTime	ExitTime	File output
+
+4	0	System	0xe58f7e675080	168	-	N/A	False	2023-08-21 13:45:50.000000 	N/A	Disabled
+84	4	Registry	0xe58f7e765040	4	-	N/A	False	2023-08-21 13:45:34.000000 	N/A	Disabled
+340	4	smss.exe	0xe58f81466040	2	-	N/A	False	2023-08-21 13:45:50.000000 	N/A	Disabled
+436	424	csrss.exe	0xe58f8399d080	10	-	0	False	2023-08-21 13:46:27.000000 	N/A	Disabled
+508	424	wininit.exe	0xe58f83ae1080	1	-	0	False	2023-08-21 13:46:27.000000 	N/A	Disabled
+524	500	csrss.exe	0xe58f83ae0080	10	-	1	False	2023-08-21 13:46:27.000000 	N/A	Disabled
+576	500	winlogon.exe	0xe58f83b18080	2	-	1	False	2023-08-21 13:46:27.000000 	N/A	Disabled
+644	508	services.exe	0xe58f82970080	5	-	0	False	2023-08-21 13:46:30.000000 	N/A	Disabled
+660	508	lsass.exe	0xe58f83b89080	8	-	0	False	2023-08-21 13:46:30.000000 	N/A	Disabled
+740	508	fontdrvhost.ex	0xe58f83bb5080	5	-	0	False	2023-08-21 13:46:36.000000 	N/A	Disabled
+772	576	fontdrvhost.ex	0xe58f83bbd180	5	-	1	False	2023-08-21 13:46:36.000000 	N/A	Disabled
+828	644	svchost.exe	0xe58f84804240	13	-	0	False	2023-08-21 13:46:37.000000 	N/A	Disabled
+876	644	svchost.exe	0xe58f84821080	9	-	0	False	2023-08-21 13:46:40.000000 	N/A	Disabled
+956	576	dwm.exe	0xe58f848f0080	13	-	1	False	2023-08-21 13:46:44.000000 	N/A	Disabled
+388	644	svchost.exe	0xe58f849712c0	32	-	0	False	2023-08-21 13:46:45.000000 	N/A	Disabled
+420	644	svchost.exe	0xe58f84972080	45	-	0	False	2023-08-21 13:46:45.000000 	N/A	Disabled
+892	644	svchost.exe	0xe58f849a6240	16	-	0	False	2023-08-21 13:46:45.000000 	N/A	Disabled
+1040	644	svchost.exe	0xe58f849eb2c0	15	-	0	False	2023-08-21 13:46:46.000000 	N/A	Disabled
+1048	644	svchost.exe	0xe58f849ec2c0	23	-	0	False	2023-08-21 13:46:46.000000 	N/A	Disabled
+1056	644	svchost.exe	0xe58f849f02c0	17	-	0	False	2023-08-21 13:46:46.000000 	N/A	Disabled
+1064	644	svchost.exe	0xe58f849f22c0	3	-	0	False	2023-08-21 13:46:46.000000 	N/A	Disabled
+1140	644	svchost.exe	0xe58f849ac080	18	-	0	False	2023-08-21 13:46:47.000000 	N/A	Disabled
+1472	4	MemCompression	0xe58f84b41040	30	-	N/A	False	2023-08-21 13:46:50.000000 	N/A	Disabled
+1540	644	svchost.exe	0xe58f84a920c0	9	-	0	False	2023-08-21 13:46:50.000000 	N/A	Disabled
+1600	644	svchost.exe	0xe58f84c402c0	11	-	0	False	2023-08-21 13:46:51.000000 	N/A	Disabled
+1656	644	svchost.exe	0xe58f84c55080	3	-	0	False	2023-08-21 13:46:51.000000 	N/A	Disabled
+1680	644	svchost.exe	0xe58f84c0a2c0	4	-	0	False	2023-08-21 13:46:51.000000 	N/A	Disabled
+1836	644	svchost.exe	0xe58f84cd8240	15	-	0	False	2023-08-21 13:46:51.000000 	N/A	Disabled
+1960	644	svchost.exe	0xe58f84c0c080	4	-	0	False	2023-08-21 13:46:51.000000 	N/A	Disabled
+1716	644	spoolsv.exe	0xe58f84da0200	7	-	0	False	2023-08-21 13:46:51.000000 	N/A	Disabled
+2176	644	svchost.exe	0xe58f84df7240	8	-	0	False	2023-08-21 13:46:51.000000 	N/A	Disabled
+2256	644	amazon-ssm-age	0xe58f84e70280	11	-	0	False	2023-08-21 13:46:51.000000 	N/A	Disabled
+2384	644	MsMpEng.exe	0xe58f84ed1340	9	-	0	False	2023-08-21 13:46:52.000000 	N/A	Disabled
+2396	644	Ec2Config.exe	0xe58f84ed2080	21	-	0	False	2023-08-21 13:46:52.000000 	N/A	Disabled
+2408	644	OfficeClickToR	0xe58f84f04340	15	-	0	False	2023-08-21 13:46:52.000000 	N/A	Disabled
+2332	576	LogonUI.exe	0xe58f862f1080	15	-	1	False	2023-08-21 13:46:56.000000 	N/A	Disabled
+3372	2256	ssm-agent-work	0xe58f86460380	11	-	0	False	2023-08-21 13:47:07.000000 	N/A	Disabled
+3380	3372	conhost.exe	0xe58f7e674080	4	-	0	False	2023-08-21 13:47:07.000000 	N/A	Disabled
+4060	644	svchost.exe	0xe58f865a62c0	7	-	0	False	2023-08-21 13:47:14.000000 	N/A	Disabled
+588	644	svchost.exe	0xe58f84a64080	4	-	0	False	2023-08-21 13:48:48.000000 	N/A	Disabled
+1852	644	SgrmBroker.exe	0xe58f86364080	3	-	0	False	2023-08-21 13:49:02.000000 	N/A	Disabled
+1336	644	svchost.exe	0xe58f864ae080	8	-	0	False	2023-08-21 13:49:02.000000 	N/A	Disabled
+3912	644	SearchIndexer.	0xe58f864b90c0	14	-	0	False	2023-08-21 13:49:03.000000 	N/A	Disabled
+448	828	WmiPrvSE.exe	0xe58f863b80c0	3	-	0	False	2023-08-21 13:50:52.000000 	N/A	Disabled
+824	3068	explorer.exe	0xe58f8756b080	0	-	2	False	2023-08-21 13:53:49.000000 	2023-08-21 14:01:08.000000 	Disabled
+4192	644	svchost.exe	0xe58f8762b240	1	-	0	False	2023-08-21 13:53:50.000000 	N/A	Disabled
+1424	644	SecurityHealth	0xe58f87a84080	8	-	0	False	2023-08-21 13:55:59.000000 	N/A	Disabled
+2164	644	svchost.exe	0xe58f865d9080	4	-	0	False	2023-08-21 13:56:46.000000 	N/A	Disabled
+5476	828	SystemSettings	0xe58f86458080	0	-	2	False	2023-08-21 13:56:49.000000 	2023-08-21 13:57:03.000000 	Disabled
+4156	644	svchost.exe	0xe58f810ac080	3	-	0	False	2023-08-21 13:56:51.000000 	N/A	Disabled
+5508	828	SystemSettings	0xe58f874ea0c0	0	-	2	False	2023-08-21 13:58:42.000000 	2023-08-21 13:59:27.000000 	Disabled
+5916	4296	csrss.exe	0xe58f860384c0	11	-	3	False	2023-08-21 14:06:26.000000 	N/A	Disabled
+4320	4296	winlogon.exe	0xe58f87b734c0	4	-	3	False	2023-08-21 14:06:26.000000 	N/A	Disabled
+5480	644	WUDFHost.exe	0xe58f879130c0	10	-	0	False	2023-08-21 14:06:28.000000 	N/A	Disabled
+4580	4320	dwm.exe	0xe58f864bb080	15	-	3	False	2023-08-21 14:06:28.000000 	N/A	Disabled
+4168	4320	fontdrvhost.ex	0xe58f87ca7080	5	-	3	False	2023-08-21 14:06:28.000000 	N/A	Disabled
+1108	644	svchost.exe	0xe58f876c6080	3	-	0	False	2023-08-21 14:06:29.000000 	N/A	Disabled
+7132	388	rdpclip.exe	0xe58f864e6080	11	-	3	False	2023-08-21 14:06:32.000000 	N/A	Disabled
+6300	420	sihost.exe	0xe58f87ade080	9	-	3	False	2023-08-21 14:06:33.000000 	N/A	Disabled
+780	644	svchost.exe	0xe58f8656b480	10	-	3	False	2023-08-21 14:06:33.000000 	N/A	Disabled
+4248	420	taskhostw.exe	0xe58f87604480	8	-	3	False	2023-08-21 14:06:33.000000 	N/A	Disabled
+4008	892	ctfmon.exe	0xe58f81557080	9	-	3	False	2023-08-21 14:06:33.000000 	N/A	Disabled
+3948	4320	userinit.exe	0xe58f87788080	0	-	3	False	2023-08-21 14:06:33.000000 	2023-08-21 14:07:00.000000 	Disabled
+596	3948	explorer.exe	0xe58f87e31080	46	-	3	False	2023-08-21 14:06:34.000000 	N/A	Disabled
+4120	644	svchost.exe	0xe58f84a7b2c0	6	-	3	False	2023-08-21 14:06:34.000000 	N/A	Disabled
+6480	828	StartMenuExper	0xe58f861b5080	8	-	3	False	2023-08-21 14:06:37.000000 	N/A	Disabled
+6724	828	RuntimeBroker.	0xe58f876d8080	2	-	3	False	2023-08-21 14:06:38.000000 	N/A	Disabled
+7120	828	SearchUI.exe	0xe58f87e7e080	32	-	3	False	2023-08-21 14:06:38.000000 	N/A	Disabled
+1096	828	RuntimeBroker.	0xe58f81551080	2	-	3	False	2023-08-21 14:06:39.000000 	N/A	Disabled
+3364	828	RuntimeBroker.	0xe58f87af6080	1	-	3	False	2023-08-21 14:06:42.000000 	N/A	Disabled
+4424	828	smartscreen.ex	0xe58f87898080	5	-	3	False	2023-08-21 14:06:51.000000 	N/A	Disabled
+6132	596	msedge.exe	0xe58f876d7080	0	-	3	False	2023-08-21 14:06:51.000000 	2023-08-21 14:06:56.000000 	Disabled
+5020	828	WindowsInterna	0xe58f87ab90c0	9	-	3	False	2023-08-21 14:07:35.000000 	N/A	Disabled
+3892	1540	audiodg.exe	0xe58f88b60080	4	-	0	False	2023-08-21 14:08:38.000000 	N/A	Disabled
+4784	828	SecurityHealth	0xe58f87edc080	1	-	3	False	2023-08-21 14:08:41.000000 	N/A	Disabled
+1396	828	ShellExperienc	0xe58f84f1e080	13	-	3	False	2023-08-21 14:08:41.000000 	N/A	Disabled
+3304	828	RuntimeBroker.	0xe58f863cb080	4	-	3	False	2023-08-21 14:08:41.000000 	N/A	Disabled
+6932	596	cmd.exe	0xe58f87c230c0	1	-	3	False	2023-08-21 14:09:01.000000 	N/A	Disabled
+6052	6932	conhost.exe	0xe58f87677080	4	-	3	False	2023-08-21 14:09:01.000000 	N/A	Disabled
+1440	596	OUTLOOK.EXE	0xe58f87c8a080	22	-	3	False	2023-08-21 14:09:04.000000 	N/A	Disabled
+1124	1440	WINWORD.EXE	0xe58f81150080	18	-	3	False	2023-08-21 14:12:31.000000 	N/A	Disabled
+6720	3912	SearchFilterHo	0xe58f8114f080	5	-	0	False	2023-08-21 14:12:33.000000 	N/A	Disabled
+4336	1124	WINWORD.EXE	0xe58f87547080	0	-	3	False	2023-08-21 14:12:34.000000 	2023-08-21 14:12:45.000000 	Disabled
+4776	828	WmiPrvSE.exe	0xe58f875020c0	9	-	0	False	2023-08-21 14:12:34.000000 	N/A	Disabled
+6592	3912	SearchProtocol	0xe58f8635f080	0	-	0	False	2023-08-21 14:12:38.000000 	2023-08-21 14:15:07.000000 	Disabled
+4260	1124	wscript.exe	0xe58f864ca0c0	6	-	3	False	2023-08-21 14:12:47.000000 	N/A	Disabled
+6216	4260	updater.exe	0xe58f87ac0080	18	-	3	False	2023-08-21 14:12:48.000000 	N/A	Disabled
+4464	6216	conhost.exe	0xe58f84bd1080	5	-	3	False	2023-08-21 14:14:03.000000 	N/A	Disabled
+6332	6932	DumpIt.exe	0xe58f87a870c0	3	-	3	True	2023-08-21 14:14:25.000000 	N/A	Disabled
+
+ubuntu@tryhackme:~/Desktop/Artefacts$ vol -f WKSTN-2961.raw windows.netscan.NetScan 
+Volatility 3 Framework 2.5.0
+Progress:  100.00		PDB scanning finished                        
+Offset	Proto	LocalAddr	LocalPort	ForeignAddr	ForeignPort	StatePID	Owner	Created
+
+0xe58f7eaf45a0	TCPv4	0.0.0.0	5040	0.0.0.0	0	LISTENING	1048	svchost.exe	2023-08-21 13:48:57.000000 
+0xe58f7eaf4ae0	UDPv4	0.0.0.0	12497	*	0		4	System	2023-08-21 13:47:05.000000 
+0xe58f7eaf4c30	UDPv4	0.0.0.0	16496	*	0		4060	svchost.exe	2023-08-21 13:47:14.000000 
+0xe58f7eaf5bf0	TCPv4	10.10.49.181	139	0.0.0.0	0	LISTENING	4	System	2023-08-21 13:47:05.000000 
+0xe58f7eaf6910	UDPv4	0.0.0.0	12497	*	0		4	System	2023-08-21 13:47:05.000000 
+0xe58f810aec10	TCPv4	10.10.49.181	63183	13.107.21.200	443	CLOSED	7120SearchUI.exe	2023-08-21 14:06:41.000000 
+0xe58f812aa1b0	UDPv4	0.0.0.0	0	*	0		1048	svchost.exe	2023-08-21 13:48:56.000000 
+0xe58f812ab2c0	UDPv4	0.0.0.0	0	*	0		1064	svchost.exe	2023-08-21 13:57:49.000000 
+0xe58f812ab2c0	UDPv6	::	0	*	0		1064	svchost.exe	2023-08-21 13:57:49.000000 
+0xe58f812ab6b0	UDPv4	0.0.0.0	0	*	0		6216	updater.exe	2023-08-21 14:12:48.000000 
+0xe58f812ab800	UDPv4	0.0.0.0	0	*	0		1064	svchost.exe	2023-08-21 13:57:49.000000 
+0xe58f81448060	UDPv4	0.0.0.0	0	*	0		2396	Ec2Config.exe2023-08-21 13:47:12.000000 
+0xe58f814481b0	UDPv4	0.0.0.0	0	*	0		2396	Ec2Config.exe2023-08-21 13:47:12.000000 
+0xe58f814481b0	UDPv6	::	0	*	0		2396	Ec2Config.exe2023-08-21 13:47:12.000000 
+0xe58f814485a0	UDPv4	0.0.0.0	0	*	0		2396	Ec2Config.exe2023-08-21 13:47:10.000000 
+0xe58f81448ae0	UDPv4	0.0.0.0	225	*	0		4060	svchost.exe	2023-08-21 13:47:14.000000 
+0xe58f81448ae0	UDPv6	::	225	*	0		4060	svchost.exe	2023-08-21 13:47:14.000000 
+0xe58f81449170	UDPv4	0.0.0.0	16608	*	0		4060	svchost.exe	2023-08-21 13:47:14.000000 
+0xe58f81449170	UDPv6	::	16608	*	0		4060	svchost.exe	2023-08-21 13:47:14.000000 
+0xe58f81449410	UDPv4	0.0.0.0	0	*	0		2396	Ec2Config.exe2023-08-21 13:47:10.000000 
+0xe58f81449560	UDPv4	0.0.0.0	0	*	0		2396	Ec2Config.exe2023-08-21 13:47:10.000000 
+0xe58f81449560	UDPv6	::	0	*	0		2396	Ec2Config.exe2023-08-21 13:47:10.000000 
+0xe58f81449aa0	UDPv4	0.0.0.0	12497	*	0		4060	svchost.exe	2023-08-21 13:47:14.000000 
+0xe58f81449d40	UDPv4	0.0.0.0	0	*	0		2396	Ec2Config.exe2023-08-21 13:47:10.000000 
+0xe58f81449d40	UDPv6	::	0	*	0		2396	Ec2Config.exe2023-08-21 13:47:10.000000 
+0xe58f8144a7c0	UDPv4	0.0.0.0	0	*	0		1140	svchost.exe	2023-08-21 13:57:49.000000 
+0xe58f8144aa60	UDPv4	0.0.0.0	16608	*	0		4060	svchost.exe	2023-08-21 13:47:14.000000 
+0xe58f8144aa60	UDPv6	::	16608	*	0		4060	svchost.exe	2023-08-21 13:47:14.000000 
+0xe58f8144b0f0	UDPv4	0.0.0.0	12497	*	0		4060	svchost.exe	2023-08-21 13:47:14.000000 
+0xe58f8144b240	UDPv4	0.0.0.0	225	*	0		4060	svchost.exe	2023-08-21 13:47:14.000000 
+0xe58f8144b240	UDPv6	::	225	*	0		4060	svchost.exe	2023-08-21 13:47:14.000000 
+0xe58f8144bcc0	UDPv4	0.0.0.0	16496	*	0		4060	svchost.exe	2023-08-21 13:47:14.000000 
+0xe58f8159d1a0	TCPv4	0.0.0.0	3389	0.0.0.0	0	LISTENING	388	svchost.exe	2023-08-21 13:46:51.000000 
+0xe58f8159d6e0	TCPv4	0.0.0.0	49667	0.0.0.0	0	LISTENING	1716	spoolsv.exe	2023-08-21 13:46:51.000000 
+0xe58f8159d980	TCPv4	0.0.0.0	49666	0.0.0.0	0	LISTENING	1056	svchost.exe	2023-08-21 13:46:51.000000 
+0xe58f8159dad0	UDPv4	0.0.0.0	0	*	0		388	svchost.exe	2023-08-21 13:46:51.000000 
+0xe58f8159dad0	UDPv6	::	0	*	0		388	svchost.exe	2023-08-21 13:46:51.000000 
+0xe58f8159dc20	UDPv4	0.0.0.0	0	*	0		388	svchost.exe	2023-08-21 13:46:51.000000 
+0xe58f8159e010	UDPv4	0.0.0.0	0	*	0		1140	svchost.exe	2023-08-21 13:57:49.000000 
+0xe58f8159e010	UDPv6	::	0	*	0		1140	svchost.exe	2023-08-21 13:57:49.000000 
+0xe58f8159e160	TCPv4	0.0.0.0	49666	0.0.0.0	0	LISTENING	1056	svchost.exe	2023-08-21 13:46:51.000000 
+0xe58f8159e160	TCPv6	::	49666	::	0	LISTENING	1056	svchost.exe	2023-08-21 13:46:51.000000 
+0xe58f8159e2b0	UDPv4	0.0.0.0	0	*	0		420	svchost.exe	2023-08-21 13:46:51.000000 
+0xe58f8159e2b0	UDPv6	::	0	*	0		420	svchost.exe	2023-08-21 13:46:51.000000 
+0xe58f8159e400	TCPv4	0.0.0.0	3389	0.0.0.0	0	LISTENING	388	svchost.exe	2023-08-21 13:46:51.000000 
+0xe58f8159e400	TCPv6	::	3389	::	0	LISTENING	388	svchost.exe	2023-08-21 13:46:51.000000 
+0xe58f8159e550	UDPv4	0.0.0.0	0	*	0		420	svchost.exe	2023-08-21 13:46:51.000000 
+0xe58f8159e550	UDPv6	::	0	*	0		420	svchost.exe	2023-08-21 13:46:51.000000 
+0xe58f8159e6a0	UDPv4	0.0.0.0	0	*	0		420	svchost.exe	2023-08-21 13:46:51.000000 
+0xe58f838f61a0	TCPv4	0.0.0.0	49664	0.0.0.0	0	LISTENING	660	lsass.exe	2023-08-21 13:46:43.000000 
+0xe58f838f61a0	TCPv6	::	49664	::	0	LISTENING	660	lsass.exe	2023-08-21 13:46:43.000000 
+0xe58f838f6440	TCPv4	0.0.0.0	135	0.0.0.0	0	LISTENING	876	svchost.exe	2023-08-21 13:46:43.000000 
+0xe58f838f6590	UDPv4	0.0.0.0	0	*	0		1064	svchost.exe	2023-08-21 13:46:47.000000 
+0xe58f838f66e0	TCPv4	0.0.0.0	49664	0.0.0.0	0	LISTENING	660	lsass.exe	2023-08-21 13:46:43.000000 
+0xe58f838f6830	TCPv4	0.0.0.0	49665	0.0.0.0	0	LISTENING	508	wininit.exe	2023-08-21 13:46:43.000000 
+0xe58f838f76a0	UDPv4	0.0.0.0	0	*	0		1064	svchost.exe	2023-08-21 13:46:47.000000 
+0xe58f838f76a0	UDPv6	::	0	*	0		1064	svchost.exe	2023-08-21 13:46:47.000000 
+0xe58f838f7940	TCPv4	0.0.0.0	135	0.0.0.0	0	LISTENING	876	svchost.exe	2023-08-21 13:46:43.000000 
+0xe58f838f7940	TCPv6	::	135	::	0	LISTENING	876	svchost.exe	2023-08-21 13:46:43.000000 
+0xe58f838f7be0	TCPv4	0.0.0.0	49665	0.0.0.0	0	LISTENING	508	wininit.exe	2023-08-21 13:46:43.000000 
+0xe58f838f7be0	TCPv6	::	49665	::	0	LISTENING	508	wininit.exe	2023-08-21 13:46:43.000000 
+0xe58f84abf2f0	UDPv4	0.0.0.0	0	*	0		420	svchost.exe	2023-08-21 13:46:52.000000 
+0xe58f84abf2f0	UDPv6	::	0	*	0		420	svchost.exe	2023-08-21 13:46:52.000000 
+0xe58f84abf440	TCPv4	0.0.0.0	49668	0.0.0.0	0	LISTENING	420	svchost.exe	2023-08-21 13:46:51.000000 
+0xe58f84abf440	TCPv6	::	49668	::	0	LISTENING	420	svchost.exe	2023-08-21 13:46:51.000000 
+0xe58f84abf590	UDPv4	0.0.0.0	0	*	0		660	lsass.exe	2023-08-21 13:46:51.000000 
+0xe58f84abf590	UDPv6	::	0	*	0		660	lsass.exe	2023-08-21 13:46:51.000000 
+0xe58f84abf830	TCPv4	0.0.0.0	49667	0.0.0.0	0	LISTENING	1716	spoolsv.exe	2023-08-21 13:46:51.000000 
+0xe58f84abf830	TCPv6	::	49667	::	0	LISTENING	1716	spoolsv.exe	2023-08-21 13:46:51.000000 
+0xe58f84abf980	UDPv4	0.0.0.0	0	*	0		1960	svchost.exe	2023-08-21 13:46:51.000000 
+0xe58f84abf980	UDPv6	::	0	*	0		1960	svchost.exe	2023-08-21 13:46:51.000000 
+0xe58f84abfec0	TCPv4	0.0.0.0	49668	0.0.0.0	0	LISTENING	420	svchost.exe	2023-08-21 13:46:51.000000 
+0xe58f84ac0400	UDPv4	0.0.0.0	0	*	0		420	svchost.exe	2023-08-21 13:46:51.000000 
+0xe58f84ac0550	TCPv4	0.0.0.0	49669	0.0.0.0	0	LISTENING	660	lsass.exe	2023-08-21 13:46:51.000000 
+0xe58f84ac0550	TCPv6	::	49669	::	0	LISTENING	660	lsass.exe	2023-08-21 13:46:51.000000 
+0xe58f84ac07f0	UDPv4	0.0.0.0	0	*	0		660	lsass.exe	2023-08-21 13:46:51.000000 
+0xe58f84ac0a90	UDPv4	0.0.0.0	0	*	0		420	svchost.exe	2023-08-21 13:46:51.000000 
+0xe58f84ac0be0	UDPv4	0.0.0.0	0	*	0		1960	svchost.exe	2023-08-21 13:46:51.000000 
+0xe58f84ac0d30	TCPv4	0.0.0.0	49669	0.0.0.0	0	LISTENING	660	lsass.exe	2023-08-21 13:46:51.000000 
+0xe58f84c42bf0	TCPv4	10.10.49.181	63304	20.42.65.88	443	ESTABLISHED	1440	OUTLOOK.EXE	2023-08-21 14:14:35.000000 
+0xe58f84d95010	TCPv4	10.10.49.181	63299	128.199.95.189	8080	CLOSED	6216updater.exe	2023-08-21 14:14:26.000000 
+0xe58f84ea2550	TCPv4	0.0.0.0	445	0.0.0.0	0	LISTENING	4	System	2023-08-21 13:46:53.000000 
+0xe58f84ea2550	TCPv6	::	445	::	0	LISTENING	4	System	2023-08-21 13:46:53.000000 
+0xe58f84ffd2f0	TCPv4	0.0.0.0	49671	0.0.0.0	0	LISTENING	644	services.exe	2023-08-21 13:46:55.000000 
+0xe58f84ffd830	TCPv4	0.0.0.0	49671	0.0.0.0	0	LISTENING	644	services.exe	2023-08-21 13:46:55.000000 
+0xe58f84ffd830	TCPv6	::	49671	::	0	LISTENING	644	services.exe	2023-08-21 13:46:55.000000 
+0xe58f84ffe400	UDPv4	0.0.0.0	16496	*	0		420	svchost.exe	2023-08-21 14:02:17.000000 
+0xe58f84ffe6a0	TCPv4	0.0.0.0	49670	0.0.0.0	0	LISTENING	1960	svchost.exe	2023-08-21 13:46:55.000000 
+0xe58f84ffe6a0	TCPv6	::	49670	::	0	LISTENING	1960	svchost.exe	2023-08-21 13:46:55.000000 
+0xe58f84ffebe0	TCPv4	0.0.0.0	49670	0.0.0.0	0	LISTENING	1960	svchost.exe	2023-08-21 13:46:55.000000 
+0xe58f8624a010	TCPv4	10.10.49.181	63219	20.42.65.88	443	CLOSED	1440OUTLOOK.EXE	2023-08-21 14:09:12.000000 
+0xe58f86455010	TCPv4	10.10.49.181	63350	128.199.95.189	8080	CLOSED	6216updater.exe	2023-08-21 14:16:11.000000 
+0xe58f86a92aa0	UDPv4	0.0.0.0	0	*	0		1140	svchost.exe	2023-08-21 13:57:49.000000 
+0xe58f86a92aa0	UDPv6	::	0	*	0		1140	svchost.exe	2023-08-21 13:57:49.000000 
+0xe58f86a93bb0	UDPv4	0.0.0.0	0	*	0		660	lsass.exe	2023-08-21 13:59:26.000000 
+0xe58f86a940f0	UDPv4	0.0.0.0	0	*	0		1140	svchost.exe	2023-08-21 14:02:16.000000 
+0xe58f86a944e0	UDPv4	0.0.0.0	0	*	0		1140	svchost.exe	2023-08-21 14:02:16.000000 
+0xe58f86a944e0	UDPv6	::	0	*	0		1140	svchost.exe	2023-08-21 14:02:16.000000 
+0xe58f86a9c1b0	UDPv4	0.0.0.0	16496	*	0		1140	svchost.exe	2023-08-21 14:02:16.000000 
+0xe58f86a9c840	UDPv4	0.0.0.0	16496	*	0		660	lsass.exe	2023-08-21 13:59:26.000000 
+0xe58f86a9d950	UDPv4	0.0.0.0	0	*	0		660	lsass.exe	2023-08-21 13:59:26.000000 
+0xe58f86a9d950	UDPv6	::	0	*	0		660	lsass.exe	2023-08-21 13:59:26.000000 
+0xe58f86b1b770	TCPv4	10.10.49.181	63331	128.199.95.189	8080	CLOSED	6216updater.exe	2023-08-21 14:15:17.000000 
+0xe58f86b73010	TCPv4	10.10.49.181	63308	128.199.95.189	8080	CLOSED	6216updater.exe	2023-08-21 14:14:39.000000 
+0xe58f86b9ebf0	TCPv4	10.10.49.181	63291	128.199.95.189	8080	CLOSED	6216updater.exe	2023-08-21 14:14:13.000000 
+0xe58f86ba7bf0	TCPv4	10.10.49.181	63242	20.189.173.10	443	CLOSED	1124WINWORD.EXE	2023-08-21 14:12:39.000000 
+0xe58f86bf2820	TCPv4	10.10.49.181	63243	20.189.173.10	443	CLOSED	1124WINWORD.EXE	2023-08-21 14:12:39.000000 
+0xe58f8741ebf0	TCPv4	10.10.49.181	63348	128.199.95.189	8080	CLOSED	6216updater.exe	2023-08-21 14:16:05.000000 
+0xe58f874eabf0	TCPv4	10.10.49.181	63286	20.54.36.229	443	ESTABLISHED	420	svchost.exe	2023-08-21 14:14:07.000000 
+0xe58f87603990	TCPv4	10.10.49.181	3389	10.4.29.242	63005	ESTABLISHED	388	svchost.exe	2023-08-21 14:06:14.000000 
+0xe58f87604010	TCPv4	10.10.49.181	63218	20.42.65.88	443	CLOSED	1440OUTLOOK.EXE	2023-08-21 14:09:12.000000 
+0xe58f8760dbf0	TCPv4	10.10.49.181	63298	128.199.95.189	8080	CLOSED	6216updater.exe	2023-08-21 14:14:24.000000 
+0xe58f8789f010	TCPv4	10.10.49.181	63305	20.42.65.88	443	ESTABLISHED	1440	OUTLOOK.EXE	2023-08-21 14:14:35.000000 
+0xe58f8797fc40	UDPv4	0.0.0.0	0	*	0		6216	updater.exe	2023-08-21 14:12:48.000000 
+0xe58f87980180	UDPv4	0.0.0.0	0	*	0		6216	updater.exe	2023-08-21 14:12:48.000000 
+0xe58f87980180	UDPv6	::	0	*	0		6216	updater.exe	2023-08-21 14:12:48.000000 
+0xe58f87980570	UDPv4	0.0.0.0	0	*	0		6216	updater.exe	2023-08-21 14:12:48.000000 
+0xe58f87980570	UDPv6	::	0	*	0		6216	updater.exe	2023-08-21 14:12:48.000000 
+0xe58f87e81bf0	TCPv4	10.10.49.181	63339	128.199.95.189	8080	CLOSED	6216updater.exe	2023-08-21 14:15:40.000000 ^CTraceback (most recent call last):
+  File "/usr/local/bin/vol", line 11, in <module>
+    load_entry_point('volatility3==2.5.0', 'console_scripts', 'vol')()
+  File "/usr/local/lib/python3.8/dist-packages/volatility3-2.5.0-py3.8.egg/volatility3/cli/__init__.py", line 790, in main
+    CommandLine().run()
+  File "/usr/local/lib/python3.8/dist-packages/volatility3-2.5.0-py3.8.egg/volatility3/cli/__init__.py", line 447, in run
+    renderers[args.renderer]().render(constructed.run())
+  File "/usr/local/lib/python3.8/dist-packages/volatility3-2.5.0-py3.8.egg/volatility3/cli/text_renderer.py", line 193, in render
+    grid.populate(visitor, outfd)
+  File "/usr/local/lib/python3.8/dist-packages/volatility3-2.5.0-py3.8.egg/volatility3/framework/renderers/__init__.py", line 241, in populate
+    for level, item in self._generator:
+  File "/usr/local/lib/python3.8/dist-packages/volatility3-2.5.0-py3.8.egg/volatility3/framework/plugins/windows/netscan.py", line 390, in _generator
+    for netw_obj in self.scan(
+  File "/usr/local/lib/python3.8/dist-packages/volatility3-2.5.0-py3.8.egg/volatility3/framework/plugins/windows/netscan.py", line 375, in scan
+    for result in poolscanner.PoolScanner.generate_pool_scan(
+  File "/usr/local/lib/python3.8/dist-packages/volatility3-2.5.0-py3.8.egg/volatility3/framework/plugins/windows/poolscanner.py", line 366, in generate_pool_scan
+    for constraint, header in cls.pool_scan(
+  File "/usr/local/lib/python3.8/dist-packages/volatility3-2.5.0-py3.8.egg/volatility3/framework/plugins/windows/poolscanner.py", line 445, in pool_scan
+    yield from layer.scan(context, scanner, progress_callback)
+  File "/usr/local/lib/python3.8/dist-packages/volatility3-2.5.0-py3.8.egg/volatility3/framework/interfaces/layers.py", line 258, in scan
+    yield from scan_chunk(value)
+  File "/usr/local/lib/python3.8/dist-packages/volatility3-2.5.0-py3.8.egg/volatility3/framework/interfaces/layers.py", line 373, in _scan_chunk
+    return list(scanner(data, chunk_end - len(data)))
+  File "/usr/local/lib/python3.8/dist-packages/volatility3-2.5.0-py3.8.egg/volatility3/framework/plugins/windows/poolscanner.py", line 76, in __call__
+    for offset, pattern in self._subscanner(data, data_offset):
+  File "/usr/local/lib/python3.8/dist-packages/volatility3-2.5.0-py3.8.egg/volatility3/framework/layers/scanners/__init__.py", line 126, in __call__
+    for offset, pattern in self.search(data):
+  File "/usr/local/lib/python3.8/dist-packages/volatility3-2.5.0-py3.8.egg/volatility3/framework/layers/scanners/__init__.py", line 137, in search
+    for match in re.finditer(self._regex, haystack):
+KeyboardInterrupt 
+
+
+ubuntu@tryhackme:~/Desktop/Artefacts$ vol -f WKSTN-2961.raw windows.registry.printkey.PrintKey
+Volatility 3 Framework 2.5.0
+Progress:  100.00		PDB scanning finished                        
+Last Write Time	Hive Offset	Type	Key	Name	Data	Volatile
+
+2023-08-21 13:45:34.000000 	0x9582eae0d000	Key	[NONAME]	A		False
+2023-08-21 13:45:34.000000 	0x9582eae0d000	Key	[NONAME]	MACHINE		False
+2023-08-21 13:45:34.000000 	0x9582eae0d000	Key	[NONAME]	USER		False
+2023-08-21 13:45:34.000000 	0x9582eae0d000	Key	[NONAME]	WC		False
+-	0x9582eae33000	Key	?\	-		-
+-	0x9582f1a2b000	Key	?\	-		-
+-	0x9582f1c45000	Key	?\	-		-
+
+ubuntu@tryhackme:~/Desktop/Artefacts$ vol -f WKSTN-2961.raw windows.pstree | grep wscript.exe
+Progress:    0.00		Scanning FileLayer using PageMapSc  
+Progress:   23.33		Scanning FileLayer using PageMapSc  
+Progress:  100.00		Stacking attempts finished        
+Progress:    0.00		Scanning memory_layer using BytesS  
+Progress:    1.60		Scanning memory_layer using BytesS  
+Progress:    3.20		Scanning memory_layer using BytesS  
+Progress:    4.80		Scanning memory_layer using BytesS  
+Progress:    6.40		Scanning memory_layer using BytesS  
+Progress:    8.00		Scanning memory_layer using BytesS  
+Progress:    9.60		Scanning memory_layer using BytesS  
+Progress:   11.20		Scanning memory_layer using BytesS  
+Progress:   12.80		Scanning memory_layer using BytesS  
+Progress:   14.40		Scanning memory_layer using BytesS  
+Progress:   16.00		Scanning memory_layer using BytesS  
+Progress:   17.60		Scanning memory_layer using BytesS  
+Progress:   19.20		Scanning memory_layer using BytesS  
+Progress:   20.80		Scanning memory_layer using BytesS  
+Progress:   22.40		Scanning memory_layer using BytesS  
+Progress:   24.00		Scanning memory_layer using BytesS  
+Progress:   25.60		Scanning memory_layer using BytesS  
+Progress:   27.20		Scanning memory_layer using BytesS  
+Progress:   28.80		Scanning memory_layer using BytesS  
+Progress:   30.40		Scanning memory_layer using BytesS  
+Progress:   32.00		Scanning memory_layer using BytesS  
+Progress:   33.60		Scanning memory_layer using BytesS  
+Progress:   35.20		Scanning memory_layer using BytesS  
+Progress:   36.80		Scanning memory_layer using BytesS  
+Progress:   38.40		Scanning memory_layer using BytesS  
+Progress:   40.00		Scanning memory_layer using BytesS  
+Progress:   41.60		Scanning memory_layer using BytesS  
+Progress:   43.20		Scanning memory_layer using BytesS  
+Progress:   44.80		Scanning memory_layer using BytesS  
+Progress:   46.40		Scanning memory_layer using BytesS  
+Progress:   48.00		Scanning memory_layer using BytesS  
+Progress:   49.60		Scanning memory_layer using BytesS  
+Progress:   51.20		Scanning memory_layer using BytesS  
+Progress:   52.80		Scanning memory_layer using BytesS  
+Progress:   54.41		Scanning memory_layer using BytesS  
+Progress:   56.01		Scanning memory_layer using BytesS  
+Progress:   57.61		Scanning memory_layer using BytesS  
+Progress:   59.21		Scanning memory_layer using BytesS  
+Progress:   60.81		Scanning memory_layer using BytesS  
+Progress:   62.41		Scanning memory_layer using BytesS  
+Progress:   64.01		Scanning memory_layer using BytesS  
+Progress:   65.61		Scanning memory_layer using BytesS  
+Progress:   67.21		Scanning memory_layer using BytesS  
+Progress:   68.81		Scanning memory_layer using BytesS  
+Progress:   70.41		Scanning memory_layer using BytesS  
+Progress:   72.01		Scanning memory_layer using BytesS  
+Progress:   73.61		Scanning memory_layer using BytesS  
+Progress:   75.21		Scanning memory_layer using BytesS  
+Progress:   76.81		Scanning memory_layer using BytesS  
+Progress:   78.41		Scanning memory_layer using BytesS  
+Progress:   80.01		Scanning memory_layer using BytesS  
+Progress:   81.61		Scanning memory_layer using BytesS  
+Progress:   83.21		Scanning memory_layer using BytesS  
+Progress:   84.81		Scanning memory_layer using BytesS  
+Progress:   86.41		Scanning memory_layer using BytesS  
+Progress:   88.01		Scanning memory_layer using BytesS  
+Progress:   89.61		Scanning memory_layer using BytesS  
+Progress:   91.21		Scanning memory_layer using BytesS  
+Progress:   92.81		Scanning memory_layer using BytesS  
+Progress:   94.41		Scanning memory_layer using BytesS  
+Progress:   96.01		Scanning memory_layer using BytesS  
+Progress:   97.61		Scanning memory_layer using BytesS  
+Progress:   99.21		Scanning memory_layer using BytesS  
+Progress:    0.00		Scanning memory_layer using BytesS  
+Progress:    1.60		Scanning memory_layer using BytesS  
+Progress:    3.20		Scanning memory_layer using BytesS  
+Progress:    4.80		Scanning memory_layer using BytesS  
+Progress:    6.40		Scanning memory_layer using BytesS  
+Progress:    0.00		Scanning layer_name using PdbSigna
+Progress:    0.00		Scanning layer_name using PdbSigna
+Progress:  100.00		PDB scanning finished             
+***** 4260      1124	wscript.exe	0xe58f864ca0c0	6	-3
+False	2023-08-21 14:12:47.000000 	N/A
+
+
+ubuntu@tryhackme:~/Desktop/Artefacts$ strings WKSTN-2961.raw | grep boogeyman
+https://files.boogeymanisba
+boogeymanisback.lol0
+boogeymanisback.lol
+*.boogeymanisback.lol0!
+files.boogeymanisback.lol
+boogeymanisback.lol0
+s.boogeymanisback.lol/aa2a9
+boogeymanisback.lol0
+boogeymanisback.lol
+*.boogeymanisback.lol0!
+boogeymanisback
+https://files.boogeymanisbac
+boogeymanisback.lol0
+boogeymanisback.lol
+*.boogeymanisback.lol0!
+boogeymanisback.lol0
+boogeymanisback.lol
+*.boogeymanisback.lol0!
+files.boogeymanisback.lol
+boogeymanisback.lol
+*.boogeymanisback.lol0!
+&files.boogeymani0
+boogeymanisback
+boogeymanisback.lol0
+boogeymanisback.lol
+*.boogeymanisback.lol0!
+files.boogeymanisback.lol
+es.boogeymanisback.lol
+var url = "https://files.boogeymanisback.lol/aa2a9c53cbb80416d3b47d85538d9971/update.exe"
+https://files.boogeymanisback.lol/aa2a9c53cbb80416d3b47d85538d9971/update.png
+files.boogeymanisback.lol
+https://files.boogeymanisback.lol/aa2a9c53cbb80416d3b47d85538d9971/update.png
+var url = "https://files.boogeymanisback.lol/aa2a9c53cbb80416d3b47d85538d9971/update.exe"
+s.boogeymanisb
+https://files.boogeymanisback.lol/aa2a9c53cbb80416d3b47d85538d9971/update.png
+var url = "https://files.boogeymanisback.lol/aa2a9c53cbb80416d3b47d85538d9971/update.exe"
+es.boogeymanisback.lol3
+files.boogeymanisback
+var url = "https://files.boogeymanisback.lol/aa2a9c53cbb80416d3b47d85538d9971/update.exe"
+s.boogeymanisback.lol/aa2a9
+boogeymanisback.lol0
+boogeymanisback.lol
+*.boogeymanisback.lol0!
+files.boogeymanisback.lol
+files.boogeymanisback.lol
+boogeymanisback.lol
+*.boogeymanisback.lol0!
+boogeymanisback.lol0
+boogeymanisback.lol
+*.boogeymanisback.lol0!
+boogeymanisback.lol0
+files.boogeymanisback.lol_
+boogeymanisback.lol0
+boogeymanisback.lol
+*.boogeymanisback.lol0!
+es.boogeymanisback.lol3
+https://files.boogeymanisba
+files.boogeymanisback.lolw
+files.boogeymanisback.lol_
+boogeymanisback.lol0
+boogeymanisback.lol
+*.boogeymanisback.lol0!
+
+
+ubuntu@tryhackme:~/Desktop/Artefacts$  vol -f WKSTN-2961.raw windows.pstree.PsTree | grep 4260
+Progress:    0.00		Scanning FileLayer using PageMapSc
+Progress:   23.33		Scanning FileLayer using PageMapSc
+Progress:  100.00		Stacking attempts finished        
+Progress:    0.00		Scanning memory_layer using BytesS
+Progress:    1.60		Scanning memory_layer using BytesS
+Progress:    3.20		Scanning memory_layer using BytesS
+Progress:    4.80		Scanning memory_layer using BytesS
+Progress:    6.40		Scanning memory_layer using BytesS
+Progress:    8.00		Scanning memory_layer using BytesS
+Progress:    9.60		Scanning memory_layer using BytesS
+Progress:   11.20		Scanning memory_layer using BytesS
+Progress:   12.80		Scanning memory_layer using BytesS
+Progress:   14.40		Scanning memory_layer using BytesS
+Progress:   16.00		Scanning memory_layer using BytesS
+Progress:   17.60		Scanning memory_layer using BytesS
+Progress:   19.20		Scanning memory_layer using BytesS
+Progress:   20.80		Scanning memory_layer using BytesS
+Progress:   22.40		Scanning memory_layer using BytesS
+Progress:   24.00		Scanning memory_layer using BytesS
+Progress:   25.60		Scanning memory_layer using BytesS
+Progress:   27.20		Scanning memory_layer using BytesS
+Progress:   28.80		Scanning memory_layer using BytesS
+Progress:   30.40		Scanning memory_layer using BytesS
+Progress:   32.00		Scanning memory_layer using BytesS
+Progress:   33.60		Scanning memory_layer using BytesS
+Progress:   35.20		Scanning memory_layer using BytesS
+Progress:   36.80		Scanning memory_layer using BytesS
+Progress:   38.40		Scanning memory_layer using BytesS
+Progress:   40.00		Scanning memory_layer using BytesS
+Progress:   41.60		Scanning memory_layer using BytesS
+Progress:   43.20		Scanning memory_layer using BytesS
+Progress:   44.80		Scanning memory_layer using BytesS
+Progress:   46.40		Scanning memory_layer using BytesS
+Progress:   48.00		Scanning memory_layer using BytesS
+Progress:   49.60		Scanning memory_layer using BytesS
+Progress:   51.20		Scanning memory_layer using BytesS
+Progress:   52.80		Scanning memory_layer using BytesS
+Progress:   54.41		Scanning memory_layer using BytesS
+Progress:   56.01		Scanning memory_layer using BytesS
+Progress:   57.61		Scanning memory_layer using BytesS
+Progress:   59.21		Scanning memory_layer using BytesS
+Progress:   60.81		Scanning memory_layer using BytesS
+Progress:   62.41		Scanning memory_layer using BytesS
+Progress:   64.01		Scanning memory_layer using BytesS
+Progress:   65.61		Scanning memory_layer using BytesS
+Progress:   67.21		Scanning memory_layer using BytesS
+Progress:   68.81		Scanning memory_layer using BytesS
+Progress:   70.41		Scanning memory_layer using BytesS
+Progress:   72.01		Scanning memory_layer using BytesS
+Progress:   73.61		Scanning memory_layer using BytesS
+Progress:   75.21		Scanning memory_layer using BytesS
+Progress:   76.81		Scanning memory_layer using BytesS
+Progress:   78.41		Scanning memory_layer using BytesS
+Progress:   80.01		Scanning memory_layer using BytesS
+Progress:   81.61		Scanning memory_layer using BytesS
+Progress:   83.21		Scanning memory_layer using BytesS
+Progress:   84.81		Scanning memory_layer using BytesS
+Progress:   86.41		Scanning memory_layer using BytesS
+Progress:   88.01		Scanning memory_layer using BytesS
+Progress:   89.61		Scanning memory_layer using BytesS
+Progress:   91.21		Scanning memory_layer using BytesS
+Progress:   92.81		Scanning memory_layer using BytesS
+Progress:   94.41		Scanning memory_layer using BytesS
+Progress:   96.01		Scanning memory_layer using BytesS
+Progress:   97.61		Scanning memory_layer using BytesS
+Progress:   99.21		Scanning memory_layer using BytesS
+Progress:    0.00		Scanning memory_layer using BytesS
+Progress:    1.60		Scanning memory_layer using BytesS
+Progress:    3.20		Scanning memory_layer using BytesS
+Progress:    4.80		Scanning memory_layer using BytesS
+Progress:    6.40		Scanning memory_layer using BytesS
+Progress:    0.00		Scanning layer_name using PdbSigna
+Progress:    0.00		Scanning layer_name using PdbSigna
+Progress:  100.00		PDB scanning finished             
+***** 4260	1124	wscript.exe	0xe58f864ca0c0	6	-3
+False	2023-08-21 14:12:47.000000 	N/A
+****** 6216	4260	updater.exe	0xe58f87ac0080	18	-3
+False	2023-08-21 14:12:48.000000 	N/A
+
+
+
+
+
+
+ubuntu@tryhackme:~/Desktop/Artefacts$ vol -f WKSTN-2961.raw windows.netscan.NetScan | grep updater.exe
+Progress:    0.00		Scanning FileLayer using PageMapScProgress:   23.33		Scanning FileLayer using PageMapScProgress:  100.00		Stacking attempts finished        Progress:    0.00		Scanning memory_layer using BytesSProgress:    1.60		Scanning memory_layer using BytesSProgress:    3.20		Scanning memory_layer using BytesSProgress:    4.80		Scanning memory_layer using BytesSProgress:    6.40		Scanning memory_layer using BytesSProgress:    8.00		Scanning memory_layer using BytesSProgress:    9.60		Scanning memory_layer using BytesSProgress:   11.20		Scanning memory_layer using BytesSProgress:   12.80		Scanning memory_layer using BytesSProgress:   14.40		Scanning memory_layer using BytesSProgress:   16.00		Scanning memory_layer using BytesSProgress:   17.60		Scanning memory_layer using BytesSProgress:   19.20		Scanning memory_layer using BytesSProgress:   20.80		Scanning memory_layer using BytesSProgress:   22.40		Scanning memory_layer using BytesSProgress:   24.00		Scanning memory_layer using BytesSProgress:   25.60		Scanning memory_layer using BytesSProgress:   27.20		Scanning memory_layer using BytesSProgress:   28.80		Scanning memory_layer using BytesSProgress:   30.40		Scanning memory_layer using BytesSProgress:   32.00		Scanning memory_layer using BytesSProgress:   33.60		Scanning memory_layer using BytesSProgress:   35.20		Scanning memory_layer using BytesSProgress:   36.80		Scanning memory_layer using BytesSProgress:   38.40		Scanning memory_layer using BytesSProgress:   40.00		Scanning memory_layer using BytesSProgress:   41.60		Scanning memory_layer using BytesSProgress:   43.20		Scanning memory_layer using BytesSProgress:   44.80		Scanning memory_layer using BytesSProgress:   46.40		Scanning memory_layer using BytesSProgress:   48.00		Scanning memory_layer using BytesSProgress:   49.60		Scanning memory_layer using BytesSProgress:   51.20		Scanning memory_layer using BytesSProgress:   52.80		Scanning memory_layer using BytesSProgress:   54.41		Scanning memory_layer using BytesSProgress:   56.01		Scanning memory_layer using BytesSProgress:   57.61		Scanning memory_layer using BytesSProgress:   59.21		Scanning memory_layer using BytesSProgress:   60.81		Scanning memory_layer using BytesSProgress:   62.41		Scanning memory_layer using BytesSProgress:   64.01		Scanning memory_layer using BytesSProgress:   65.61		Scanning memory_layer using BytesSProgress:   67.21		Scanning memory_layer using BytesSProgress:   68.81		Scanning memory_layer using BytesSProgress:   70.41		Scanning memory_layer using BytesSProgress:   72.01		Scanning memory_layer using BytesSProgress:   73.61		Scanning memory_layer using BytesSProgress:   75.21		Scanning memory_layer using BytesSProgress:   76.81		Scanning memory_layer using BytesSProgress:   78.41		Scanning memory_layer using BytesSProgress:   80.01		Scanning memory_layer using BytesSProgress:   81.61		Scanning memory_layer using BytesSProgress:   83.21		Scanning memory_layer using BytesSProgress:   84.81		Scanning memory_layer using BytesSProgress:   86.41		Scanning memory_layer using BytesSProgress:   88.01		Scanning memory_layer using BytesSProgress:   89.61		Scanning memory_layer using BytesSProgress:   91.21		Scanning memory_layer using BytesSProgress:   92.81		Scanning memory_layer using BytesSProgress:   94.41		Scanning memory_layer using BytesSProgress:   96.01		Scanning memory_layer using BytesSProgress:   97.61		Scanning memory_layer using BytesSProgress:   99.21		Scanning memory_layer using BytesSProgress:    0.00		Scanning memory_layer using BytesSProgress:    1.60		Scanning memory_layer using BytesSProgress:    3.20		Scanning memory_layer using BytesSProgress:    4.80		Scanning memory_layer using BytesSProgress:    6.40		Scanning memory_layer using BytesSProgress:    0.00		Scanning layer_name using PdbSignaProgress:    0.00		Scanning layer_name using PdbSignaProgress:  100.00		PDB scanning finished             0xe58f812ab6b0	UDPv4	0.0.0.0	0	*	0		6216	updater.exe	2023-08-21 14:12:48.000000 
+0xe58f84d95010	TCPv4	10.10.49.181	63299	128.199.95.189	8080	CLOSED	6216	updater.exe	2023-08-21 14:14:26.000000 
+0xe58f86455010	TCPv4	10.10.49.181	63350	128.199.95.189	8080	CLOSED	6216	updater.exe	2023-08-21 14:16:11.000000 
+0xe58f86b1b770	TCPv4	10.10.49.181	63331	128.199.95.189	8080	CLOSED	6216	updater.exe	2023-08-21 14:15:17.000000 
+0xe58f86b73010	TCPv4	10.10.49.181	63308	128.199.95.189	8080	CLOSED	6216	updater.exe	2023-08-21 14:14:39.000000 
+0xe58f86b9ebf0	TCPv4	10.10.49.181	63291	128.199.95.189	8080	CLOSED	6216	updater.exe	2023-08-21 14:14:13.000000 
+0xe58f8741ebf0	TCPv4	10.10.49.181	63348	128.199.95.189	8080	CLOSED	6216	updater.exe	2023-08-21 14:16:05.000000 
+0xe58f8760dbf0	TCPv4	10.10.49.181	63298	128.199.95.189	8080	CLOSED	6216	updater.exe	2023-08-21 14:14:24.000000 
+0xe58f8797fc40	UDPv4	0.0.0.0	0	*	0		6216	updater.exe	2023-08-21 14:12:48.000000 
+0xe58f87980180	UDPv4	0.0.0.0	0	*	0		6216	updater.exe	2023-08-21 14:12:48.000000 
+0xe58f87980180	UDPv6	::	0	*	0		6216	updater.exe	2023-08-21 14:12:48.000000 
+0xe58f87980570	UDPv4	0.0.0.0	0	*	0		6216	updater.exe	2023-08-21 14:12:48.000000 
+0xe58f87980570	UDPv6	::	0	*	0		6216	updater.exe	2023-08-21 14:12:48.000000 
+0xe58f87e81bf0	TCPv4	10.10.49.181	63339	128.199.95.189	8080	CLOSED	6216	updater.exe	2023-08-21 14:15:40.000000 
+
+ubuntu@tryhackme:~/Desktop/Artefacts$ vol -f WKSTN-2961.raw windows.filescan | grep Resume_WesleyTaylor
+Progress:    0.00		Scanning FileLayer using PageMapSc
+Progress:   23.33		Scanning FileLayer using PageMapSc
+Progress:  100.00		Stacking attempts finished        
+Progress:    0.00		Scanning memory_layer using BytesS
+Progress:    1.60		Scanning memory_layer using BytesS
+Progress:    3.20		Scanning memory_layer using BytesS
+Progress:    4.80		Scanning memory_layer using BytesS
+Progress:    6.40		Scanning memory_layer using BytesS
+Progress:    8.00		Scanning memory_layer using BytesS
+Progress:    9.60		Scanning memory_layer using BytesS
+Progress:   11.20		Scanning memory_layer using BytesS
+Progress:   12.80		Scanning memory_layer using BytesS
+Progress:   14.40		Scanning memory_layer using BytesS
+Progress:   16.00		Scanning memory_layer using BytesS
+Progress:   17.60		Scanning memory_layer using BytesS
+Progress:   19.20		Scanning memory_layer using BytesS
+Progress:   20.80		Scanning memory_layer using BytesS
+Progress:   22.40		Scanning memory_layer using BytesS
+Progress:   24.00		Scanning memory_layer using BytesS
+Progress:   25.60		Scanning memory_layer using BytesS
+Progress:   27.20		Scanning memory_layer using BytesS
+Progress:   28.80		Scanning memory_layer using BytesS
+Progress:   30.40		Scanning memory_layer using BytesS
+Progress:   32.00		Scanning memory_layer using BytesS
+Progress:   33.60		Scanning memory_layer using BytesS
+Progress:   35.20		Scanning memory_layer using BytesS
+Progress:   36.80		Scanning memory_layer using BytesS
+Progress:   38.40		Scanning memory_layer using BytesS
+Progress:   40.00		Scanning memory_layer using BytesS
+Progress:   41.60		Scanning memory_layer using BytesS
+Progress:   43.20		Scanning memory_layer using BytesS
+Progress:   44.80		Scanning memory_layer using BytesS
+Progress:   46.40		Scanning memory_layer using BytesS
+Progress:   48.00		Scanning memory_layer using BytesS
+Progress:   49.60		Scanning memory_layer using BytesS
+Progress:   51.20		Scanning memory_layer using BytesS
+Progress:   52.80		Scanning memory_layer using BytesS
+Progress:   54.41		Scanning memory_layer using BytesS
+Progress:   56.01		Scanning memory_layer using BytesS
+Progress:   57.61		Scanning memory_layer using BytesS
+Progress:   59.21		Scanning memory_layer using BytesS
+Progress:   60.81		Scanning memory_layer using BytesS
+Progress:   62.41		Scanning memory_layer using BytesS
+Progress:   64.01		Scanning memory_layer using BytesS
+Progress:   65.61		Scanning memory_layer using BytesS
+Progress:   67.21		Scanning memory_layer using BytesS
+Progress:   68.81		Scanning memory_layer using BytesS
+Progress:   70.41		Scanning memory_layer using BytesS
+Progress:   72.01		Scanning memory_layer using BytesS
+Progress:   73.61		Scanning memory_layer using BytesS
+Progress:   75.21		Scanning memory_layer using BytesS
+Progress:   76.81		Scanning memory_layer using BytesS
+Progress:   78.41		Scanning memory_layer using BytesS
+Progress:   80.01		Scanning memory_layer using BytesS
+Progress:   81.61		Scanning memory_layer using BytesS
+Progress:   83.21		Scanning memory_layer using BytesS
+Progress:   84.81		Scanning memory_layer using BytesS
+Progress:   86.41		Scanning memory_layer using BytesS
+Progress:   88.01		Scanning memory_layer using BytesS
+Progress:   89.61		Scanning memory_layer using BytesS
+Progress:   91.21		Scanning memory_layer using BytesS
+Progress:   92.81		Scanning memory_layer using BytesS
+Progress:   94.41		Scanning memory_layer using BytesS
+Progress:   96.01		Scanning memory_layer using BytesS
+Progress:   97.61		Scanning memory_layer using BytesS
+Progress:   99.21		Scanning memory_layer using BytesS
+Progress:    0.00		Scanning memory_layer using BytesS
+Progress:    1.60		Scanning memory_layer using BytesS
+Progress:    3.20		Scanning memory_layer using BytesS
+Progress:    4.80		Scanning memory_layer using BytesS
+Progress:    6.40		Scanning memory_layer using BytesS
+Progress:    0.00		Scanning layer_name using PdbSigna
+Progress:    0.00		Scanning layer_name using PdbSigna
+Progress:  100.00		PDB scanning finished             
+0xe58f86465740	\Users\maxine.beck\AppData\Local\Microsoft\Windows\INetCache\Content.Outlook\WQHGZCFI\Resume_WesleyTaylor (002).doc216
+0xe58f878c1420	\Users\maxine.beck\AppData\Local\Microsoft\Windows\INetCache\Content.Outlook\WQHGZCFI\Resume_WesleyTaylor (002).doc216
+
